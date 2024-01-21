@@ -215,3 +215,4 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
+/src/main/resources/application.yaml

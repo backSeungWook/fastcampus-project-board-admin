@@ -1,0 +1,55 @@
+debug: false
+management.endpoints.web.exposure.include: "*"
+
+logging:
+  level:
+    com.fastcampus.projectboardadmin: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+server:
+  port: 8081
+
+spring:
+  devtools.livereload.port: 35730
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/board
+    username: back
+    password: "#@!dsa"
+  jpa:
+    open-in-view: false
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  sql.init.mode: always
+  #게시글, 댓글의 json api 를 자동으로 restful 하게 만들게끔 설정
+#  data.rest:
+#    base-path: /api
+#    detection-strategy: annotated
+  thymeleaf3:
+    decoupled-logic: true
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: ${KAKAO_OAUTH_CLIENT_ID}
+            client-secret: ${KAKAO_OAUTH_CLIENT_SECRET}
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/kakao"
+            client-authentication-method: POST
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+
+---
+spring:
+  config.activate.on-profile: test
+  datasource.url: jdbc:h2:mem:testdb

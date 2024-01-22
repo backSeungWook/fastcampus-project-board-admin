@@ -28,7 +28,7 @@ public class UserAccount extends AuditingFields {
     @Setter
     @Column(nullable = false) private String userPassword;
 
-    @Convert(converter = RoleTypesConverter.class)
+    @Convert(converter = RoleTypesConverter.class) // => "ROLE_USER,ROLE_MANAGER,ROLE_DEVELOPER,ROLE_ADMIN"
     @Column(nullable = false)
     private Set<RoleType> roleTypes = new LinkedHashSet<>();
 

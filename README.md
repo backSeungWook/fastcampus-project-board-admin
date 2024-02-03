@@ -13,6 +13,14 @@
 * https://github.com/djkeh/fastcampus-project-board-admin
 
 
+## JUNIT5
+
+``contentTypeCompatibleWith``  
+테스트 페이지가 UTF-8이 포함되어 있는 HTML 타입이면 정상 따라서 어느 정도 호환 되는 타입까지 지원. 
+```
+.andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+```
+
 ## 어노테이션
 
 ### @Convert

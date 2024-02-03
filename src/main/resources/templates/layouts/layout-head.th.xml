@@ -3,4 +3,6 @@
     <attr sel="#layout-head" th:fragment="common_head(title, links)" />
     <attr sel="#head-title" th:replace="${title}" />
     <attr sel="#head-links" th:replace="${links}" />
+    <attr sel="#login" sec:authorize="!isAuthenticated()" th:href="@{/oauth2/authorization/kakao}" />
+    <attr sel="#logout" sec:authorize="isAuthenticated()" th:href="@{/logout}" />
 </thlogic>

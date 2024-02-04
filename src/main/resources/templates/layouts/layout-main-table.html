@@ -5,7 +5,7 @@
     <title>공통 메인 컨텐츠 (테이블형)</title>
 </head>
 <body>
-<main id="layout-main" class="content-wrapper">
+<main id="layout-main" class="content-wrapper accent-dark">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -28,7 +28,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <section class="col-12 connectedSortable">
                     <div class="card">
                         <div class="card-header">
                             <h3 id="card-title" class="card-title">카드 제목</h3>
@@ -40,7 +40,8 @@
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
-                </div>
+                    <div class="card col-6" id="layout-card-todolist"></div>
+                </section>
                 <!-- /.col -->
             </div>
             <!-- /.row -->

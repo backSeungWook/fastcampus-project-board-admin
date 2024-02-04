@@ -1,10 +1,9 @@
 package com.fastcampus.projectboardadmin.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 
 import com.fastcampus.projectboardadmin.domain.constant.RoleType;
 import com.fastcampus.projectboardadmin.dto.ArticleDto;
+import com.fastcampus.projectboardadmin.dto.AdminAccountDto;
 import com.fastcampus.projectboardadmin.dto.UserAccountDto;
 import com.fastcampus.projectboardadmin.dto.properties.ProjectProperties;
 import com.fastcampus.projectboardadmin.dto.response.ArticleClientResponse;
@@ -36,7 +35,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 @DisplayName("비즈니스 로직 - 게시글 관리")
 class ArticleManagementServiceTest {
 
-    //    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
+    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
     @DisplayName("실제 API 호출 테스트")
     @SpringBootTest
     @Nested
@@ -111,7 +110,7 @@ class ArticleManagementServiceTest {
                     .hasFieldOrPropertyWithValue("title", expectedArticle.title())
                     .hasFieldOrPropertyWithValue("content", expectedArticle.content())
                     .hasFieldOrPropertyWithValue("userAccount.nickname", expectedArticle.userAccount().nickname());
-            server.verify();
+            server.verify(); // 위 로직이 실제로 실행이 되었는지.
         }
 
         @DisplayName("게시글 ID와 함께 게시글 API을 호출하면, 게시글을 가져온다.")
@@ -174,8 +173,6 @@ class ArticleManagementServiceTest {
         private UserAccountDto createUserAccountDto() {
             return UserAccountDto.of(
                     "unoTest",
-                    "pw",
-                    Set.of(RoleType.ADMIN),
                     "uno-test@email.com",
                     "uno-test",
                     "test memo"

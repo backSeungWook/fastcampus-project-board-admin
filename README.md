@@ -52,9 +52,19 @@ HTML5 이전에는 `<div>`, `<span>`과 같이 콘텐츠 보유 역할은 하지
 
 ### @JsonInclude(JsonInclude.Include.NON_NULL)
 
+### @ControllerAdvice
+
 ## AdminLTE
 Bootstrap 기반의 Admin 사이트를 쉽게 개발하게 해주는 템플릿이다.  
 여러 javascript 라이브러리를 사용하여 만들어져 있고, 관리자 사이트에 필요한 다양한 차트 등을 제공한다.  
 제공되는 무료 소스를 이용하여 header, content, footer 영역으로 분리, 개발할 수 있는 형태를 만든다.
 
 [adminlte.io](https://adminlte.io/)
+
+## MeterRegistry
+
+
+## WebSocket
+
+[spring.io/guides/gs/messaging-stomp-websocket](https://spring.io/guides/gs/messaging-stomp-websocket/)  
+[adminlte.io/docs/3.2/javascript/direct-chat.html](https://adminlte.io/docs/3.2/javascript/direct-chat.html)

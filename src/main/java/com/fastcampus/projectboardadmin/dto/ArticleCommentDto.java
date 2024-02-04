@@ -14,8 +14,8 @@ public record ArticleCommentDto(
         String modifiedBy
 ) {
 
-    public static ArticleCommentDto of(Long id, Long articleId, UserAccountDto userAccountDto, Long parentCommentId, String content, LocalDateTime createdAt, String createdBy, LocalDateTime modifiedAt, String modifiedBy) {
-        return new ArticleCommentDto(id, articleId, userAccountDto, parentCommentId, content, createdAt, createdBy, modifiedAt, modifiedBy);
+    public static ArticleCommentDto of(Long id, Long articleId, UserAccountDto userAccount, Long parentCommentId, String content, LocalDateTime createdAt, String createdBy, LocalDateTime modifiedAt, String modifiedBy) {
+        return new ArticleCommentDto(id, articleId, userAccount, parentCommentId, content, createdAt, createdBy, modifiedAt, modifiedBy);
     }
 
 }

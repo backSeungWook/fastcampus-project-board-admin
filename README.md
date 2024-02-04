@@ -21,6 +21,12 @@
 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
 ```
 
+### @EnableConfigurationProperties(ProjectProperties.class)
+### @AutoConfigureWebClient(registerRestTemplate = true)
+### @RestClientTest(ArticleCommentManagementService.class)
+### @Nested
+### MockRestServiceServer
+
 ## SemanticTag
 인터넷의 발전으로 방대한 양의 웹문서가 생기면서, 제각기 일관적이지 않게 생성된 문서 구조로 우리는 웹에서 원하는 정보를 찾을 때 점점 어려움을 겪게 되었습니다.
 
@@ -39,3 +45,10 @@ HTML5 이전에는 `<div>`, `<span>`과 같이 콘텐츠 보유 역할은 하지
 ### @Convert
 
 ### @Converter
+
+## AdminLTE
+Bootstrap 기반의 Admin 사이트를 쉽게 개발하게 해주는 템플릿이다.  
+여러 javascript 라이브러리를 사용하여 만들어져 있고, 관리자 사이트에 필요한 다양한 차트 등을 제공한다.  
+제공되는 무료 소스를 이용하여 header, content, footer 영역으로 분리, 개발할 수 있는 형태를 만든다.
+
+[adminlte.io](https://adminlte.io/)

@@ -48,7 +48,9 @@ HTML5 이전에는 `<div>`, `<span>`과 같이 콘텐츠 보유 역할은 하지
 
 ### @ResponseStatus
 
-### ß@ResponseBody
+### @ResponseBody
+
+### @JsonInclude(JsonInclude.Include.NON_NULL)
 
 ## AdminLTE
 Bootstrap 기반의 Admin 사이트를 쉽게 개발하게 해주는 템플릿이다.  
